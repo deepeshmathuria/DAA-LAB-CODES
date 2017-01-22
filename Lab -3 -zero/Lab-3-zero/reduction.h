@@ -1,0 +1,1 @@
+void reduceToZero(long long int A[8][8]);

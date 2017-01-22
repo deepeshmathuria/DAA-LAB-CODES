@@ -1,0 +1,1 @@
+void findShifts(char *ip, char *pattern);

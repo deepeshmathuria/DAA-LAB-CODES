@@ -1,0 +1,1 @@
+void generateGraph(int v, int deg);

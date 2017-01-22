@@ -1,0 +1,1 @@
+int sequence(int *A,int n);

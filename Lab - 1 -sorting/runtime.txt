@@ -1,0 +1,9 @@
+Execution time: 0 for 1000 inputs
+Execution time: 0 for 10 inputs
+Execution time: 000000 for 30 inputs
+Execution time: 000000 for 1000 inputs
+Execution time: 000000 for 100 inputs
+Execution time: 000000 for 10 inputs
+Execution time: 000000 for 10 inputs
+Execution time: 000000 for 100 inputs
+Execution time: 000000 for 10000 inputs

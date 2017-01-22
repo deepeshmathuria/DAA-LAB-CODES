@@ -1,0 +1,1 @@
+void lcs( char X[20], char Y[20], char Z[20], int l, int m, int n );
