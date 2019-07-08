@@ -1,0 +1,19 @@
+import numpy as np
+import pandas as pd
+
+variance_threshold = 10 # if variance less than 10% we drop the column
+
+def removeLowVarianceColumns(features):
+    variance = features.var()
+    feature_names = features.columns
+    low_var_features = []
+    for i in range(0,len(variance)):
+        if variance[i]<variance_threshold:
+            low_var_features.append(feature_names[i+1])
+
+    #removing the columns with threshold<10%
+    features.drop(columns=low_var_features)
+    return features
+
+
+
