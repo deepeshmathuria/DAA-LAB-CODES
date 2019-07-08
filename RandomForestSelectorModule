@@ -1,0 +1,19 @@
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.feature_selection import SelectFromModel
+import logging
+
+
+def removeUnimportantFeaturesWithLessPurity(features, labels):
+    logging.info("performing random forest based feature selection")
+    model = SelectFromModel(RandomForestClassifier(n_estimators=100))
+    model.fit(features, labels)
+    feature_list = features.columns
+    feature_imp_map = model.get_support()
+    feature_imp_map = feature_imp_map.array
+    redundant_features = []
+    for i in range(0, len(feature_imp_map) - 1):
+        if feature_imp_map[i] is False:
+            redundant_features.append(feature_list[i])
+    logging.info("removing features post random forest: " + redundant_features)
+    features.drop(redundant_features, axis=1)
+    return features
